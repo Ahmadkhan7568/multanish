@@ -19,10 +19,10 @@ function App() {
       <div className="overlay"></div>
 
       <main className="content-wrapper">
-        <h2 className="tagline">A Legacy Reimagined</h2>
+        <h2 className="tagline">The Essence of Multan</h2>
         <h1 className="multanish-logo">Multanish</h1>
         <p className="main-title">
-          Discover the pinnacle of traditional Pakistani craftsmanship, elevated for the modern era. An exclusive collection of luxury heritage pieces is arriving soon.
+          Experience the authentic soul of tradition. An exclusive collection featuring Multan's finest <strong style={{ color: '#D4AF37', fontWeight: 400 }}>masalas</strong>, heritage <strong style={{ color: '#D4AF37', fontWeight: 400 }}>pottery</strong>, pure <strong style={{ color: '#D4AF37', fontWeight: 400 }}>Multani mitti</strong>, and timeless <strong style={{ color: '#D4AF37', fontWeight: 400 }}>handicrafts</strong> is arriving soon.
         </p>
 
         <div className="subscribe-container">
