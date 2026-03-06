@@ -5,7 +5,8 @@
   --gold-accent-hover: #F3E5AB;
   --bg-dark: #000000;
   --text-main: #FFFFFF;
-  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-muted: rgba(255, 255, 255, 0.85);
+  /* Increased opacity */
 }
 
 * {
@@ -45,8 +46,9 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -2;
-  animation: subtleZoom 40s ease-out infinite alternate;
-  filter: grayscale(20%) brightness(0.6);
+  animation: subtleZoom 60s ease-out infinite alternate;
+  filter: brightness(0.4) contrast(1.1);
+  /* Darkened slightly more for contrast */
 }
 
 .overlay {
@@ -56,8 +58,8 @@ h6 {
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at center,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 1) 100%);
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.85) 100%);
   z-index: -1;
 }
 
@@ -71,48 +73,74 @@ h6 {
   height: 100vh;
   padding: 2rem;
   text-align: center;
+  /* Added a very subtle dark glow behind the core content for legibility */
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, transparent 70%);
 }
 
 .multanish-logo {
-  font-size: 5rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  margin-bottom: 0.8rem;
+  font-size: 6rem;
+  /* Increased size */
+  font-weight: 800;
+  /* Bolder */
+  letter-spacing: 0.35em;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: fadeIn 3s ease-out;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Added shadow for pop */
+  filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2));
+  /* Subtle gold glow */
 }
 
 @media (max-width: 768px) {
   .multanish-logo {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 
 .tagline {
-  font-size: 0.75rem;
-  font-weight: 300;
-  letter-spacing: 0.5em;
+  font-size: 0.9rem;
+  /* Slightly larger */
+  font-weight: 500;
+  /* Bolder */
+  letter-spacing: 0.6em;
+  /* More spacing */
   text-transform: uppercase;
   color: var(--gold-accent);
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   opacity: 0;
   animation: fadeIn 3s ease-out 0.8s forwards;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .main-title {
-  font-size: 1.25rem;
-  font-weight: 200;
-  letter-spacing: 0.15em;
-  color: var(--text-muted);
-  max-width: 650px;
-  line-height: 2;
-  margin-bottom: 5rem;
+  font-size: 1.5rem;
+  /* Increased size */
+  font-weight: 400;
+  /* Better weight for prominence */
+  letter-spacing: 0.12em;
+  color: var(--text-main);
+  /* Full white for prominence */
+  max-width: 750px;
+  line-height: 1.8;
+  margin-bottom: 5.5rem;
   opacity: 0;
   animation: fadeIn 3s ease-out 1.5s forwards;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  /* Stronger shadow */
+}
+
+.debuting-soon {
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  font-weight: 600;
+  color: var(--gold-accent);
+  opacity: 0.9;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
 }
 
 .subscribe-container {
@@ -120,51 +148,59 @@ h6 {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 450px;
+  max-width: 480px;
   opacity: 0;
   animation: fadeIn 3s ease-out 2.2s forwards;
 }
 
 .input-field {
   width: 100%;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.03);
+  /* Added slight background */
   border: none;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-  padding: 15px 0;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+  /* Thicker border */
+  padding: 18px 0;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+  font-size: 1rem;
   text-align: center;
-  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: all 0.5s ease;
   outline: none;
-  margin-bottom: 2rem;
-  letter-spacing: 0.15em;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.2em;
 }
 
 .input-field::placeholder {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  font-size: 0.8rem;
 }
 
 .input-field:focus {
   border-bottom-color: var(--gold-accent);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 20px -10px rgba(212, 175, 55, 0.2);
 }
 
 .action-btn {
   background: transparent;
-  border: 1px solid rgba(212, 175, 55, 0.6);
+  border: 1.5px solid var(--gold-accent);
+  /* Thicker border */
   color: var(--gold-accent);
-  padding: 16px 50px;
+  padding: 18px 60px;
   font-family: 'Cinzel', serif;
-  font-size: 0.85em;
-  letter-spacing: 0.25em;
+  font-size: 1em;
+  /* Larger button text */
+  font-weight: 600;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .action-btn::before {
@@ -181,7 +217,8 @@ h6 {
 
 .action-btn:hover {
   color: var(--bg-dark);
-  border-color: var(--gold-accent);
+  box-shadow: 0 15px 30px -10px var(--gold-accent);
+  transform: translateY(-2px);
 }
 
 .action-btn:hover::before {
@@ -202,7 +239,7 @@ h6 {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(25px);
   }
 
   to {
@@ -216,9 +253,11 @@ h6 {
   bottom: 2.5rem;
   width: 100%;
   text-align: center;
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: rgba(255, 255, 255, 0.5);
+  /* Slightly clearer */
   text-transform: uppercase;
   opacity: 0;
   animation: fadeIn 3s ease-out 2.8s forwards;

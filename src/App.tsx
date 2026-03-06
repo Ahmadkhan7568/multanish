@@ -24,7 +24,7 @@ function App() {
         <p className="main-title">
           Quietly curated. Meticulously crafted. The essence of heritage is being reimagined for those who understand true distinction.
           <br /><br />
-          <span style={{ fontSize: '0.8rem', letterSpacing: '0.4rem', opacity: 0.5, fontWeight: 300 }}>DEBUTING SOON</span>
+          <span className="debuting-soon">DEBUTING SOON</span>
         </p>
 
         <div className="subscribe-container">
