@@ -19,10 +19,12 @@ function App() {
       <div className="overlay"></div>
 
       <main className="content-wrapper">
-        <h2 className="tagline">The Essence of Multan</h2>
+        <h2 className="tagline">A Legend Awakening</h2>
         <h1 className="multanish-logo">Multanish</h1>
         <p className="main-title">
-          Experience the authentic soul of tradition. An exclusive collection featuring Multan's finest <strong style={{ color: '#D4AF37', fontWeight: 400 }}>masalas</strong>, heritage <strong style={{ color: '#D4AF37', fontWeight: 400 }}>pottery</strong>, pure <strong style={{ color: '#D4AF37', fontWeight: 400 }}>Multani mitti</strong>, and timeless <strong style={{ color: '#D4AF37', fontWeight: 400 }}>handicrafts</strong> is arriving soon.
+          Quietly curated. Meticulously crafted. The essence of heritage is being reimagined for those who understand true distinction.
+          <br /><br />
+          <span style={{ fontSize: '0.8rem', letterSpacing: '0.4rem', opacity: 0.5, fontWeight: 300 }}>DEBUTING SOON</span>
         </p>
 
         <div className="subscribe-container">

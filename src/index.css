@@ -5,7 +5,7 @@
   --gold-accent-hover: #F3E5AB;
   --bg-dark: #000000;
   --text-main: #FFFFFF;
-  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-muted: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -45,7 +45,8 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -2;
-  animation: subtleZoom 30s ease-out infinite alternate;
+  animation: subtleZoom 40s ease-out infinite alternate;
+  filter: grayscale(20%) brightness(0.6);
 }
 
 .overlay {
@@ -54,10 +55,9 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(0, 0, 0, 0.95) 100%);
+  background: radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 100%);
   z-index: -1;
 }
 
@@ -76,14 +76,14 @@ h6 {
 .multanish-logo {
   font-size: 5rem;
   font-weight: 700;
-  letter-spacing: 0.25em;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 0.8rem;
   text-transform: uppercase;
   background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: fadeIn 2s ease-out;
+  animation: fadeIn 3s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -93,26 +93,26 @@ h6 {
 }
 
 .tagline {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 300;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
   color: var(--gold-accent);
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   opacity: 0;
-  animation: fadeIn 2s ease-out 0.5s forwards;
+  animation: fadeIn 3s ease-out 0.8s forwards;
 }
 
 .main-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 200;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   color: var(--text-muted);
-  max-width: 600px;
-  line-height: 1.6;
-  margin-bottom: 4rem;
+  max-width: 650px;
+  line-height: 2;
+  margin-bottom: 5rem;
   opacity: 0;
-  animation: fadeIn 2s ease-out 1s forwards;
+  animation: fadeIn 3s ease-out 1.5s forwards;
 }
 
 .subscribe-container {
@@ -120,33 +120,32 @@ h6 {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   opacity: 0;
-  animation: fadeIn 2s ease-out 1.5s forwards;
+  animation: fadeIn 3s ease-out 2.2s forwards;
 }
 
 .input-field {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.5);
-  /* Gold border */
-  padding: 12px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 15px 0;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-align: center;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
   outline: none;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  letter-spacing: 0.15em;
 }
 
 .input-field::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.2);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
 }
 
 .input-field:focus {
@@ -155,15 +154,15 @@ h6 {
 
 .action-btn {
   background: transparent;
-  border: 1px solid var(--gold-accent);
+  border: 1px solid rgba(212, 175, 55, 0.6);
   color: var(--gold-accent);
-  padding: 14px 40px;
+  padding: 16px 50px;
   font-family: 'Cinzel', serif;
-  font-size: 0.9em;
-  letter-spacing: 0.2em;
+  font-size: 0.85em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative;
   overflow: hidden;
 }
@@ -176,12 +175,13 @@ h6 {
   width: 100%;
   height: 100%;
   background: var(--gold-accent);
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: -1;
 }
 
 .action-btn:hover {
   color: var(--bg-dark);
+  border-color: var(--gold-accent);
 }
 
 .action-btn:hover::before {
@@ -195,14 +195,14 @@ h6 {
   }
 
   100% {
-    transform: scale(1.1);
+    transform: scale(1.15);
   }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
 
   to {
@@ -213,13 +213,13 @@ h6 {
 
 .footer {
   position: absolute;
-  bottom: 2rem;
+  bottom: 2.5rem;
   width: 100%;
   text-align: center;
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   opacity: 0;
-  animation: fadeIn 2s ease-out 2s forwards;
+  animation: fadeIn 3s ease-out 2.8s forwards;
 }
